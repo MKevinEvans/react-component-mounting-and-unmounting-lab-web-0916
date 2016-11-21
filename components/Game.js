@@ -35,8 +35,11 @@ class Game extends React.Component {
       raw: 0
     };
     this.addPancake = this.addPancake.bind(this);
-    this.takeItOff = this.takeItOff.bind(this);
+    this.takeItOff = this.takeItOff.bind(this); 
   }
+  componentWillMount(){
+      this.setCurrentTime()
+    }
 
   render() {
     const { pancakes, burnt, cooked, raw, time } = this.state;
